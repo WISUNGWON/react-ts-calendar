@@ -15,28 +15,10 @@ const App: React.FC = () => {
 
     setHatches(calendar);
   }, []);
-
-  // Store calendal in localStorage
-  useEffect(() => {
-    hatches.length && localStorage.setItem("calendar", JSON.stringify(hatches));
-  }, [hatches]);
-
-  const handleClickHatch = (nr: number) => {
-    const updateHatches = hatches.map((hatch) =>
-      hatch.nr === nr ? { ...hatch, open: !hatch.open } : hatch
-    );
-    setHatches(updateHatches);
-  };
   return (
     <StyledApp>
       <GlobalStyle />
-      {hatches.map((hatch) => (
-        <Hatch
-          key={hatch.nr}
-          hatchData={hatch}
-          handleClick={handleClickHatch}
-        />
-      ))}
+      <div>Start here</div>
     </StyledApp>
   );
 };

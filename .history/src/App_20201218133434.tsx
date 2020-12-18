@@ -25,17 +25,12 @@ const App: React.FC = () => {
     const updateHatches = hatches.map((hatch) =>
       hatch.nr === nr ? { ...hatch, open: !hatch.open } : hatch
     );
-    setHatches(updateHatches);
   };
   return (
     <StyledApp>
       <GlobalStyle />
       {hatches.map((hatch) => (
-        <Hatch
-          key={hatch.nr}
-          hatchData={hatch}
-          handleClick={handleClickHatch}
-        />
+        <Hatch key={hatch.nr} hatchData={hatch} handleClick={() => null} />
       ))}
     </StyledApp>
   );

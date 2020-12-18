@@ -31,11 +31,7 @@ const App: React.FC = () => {
     <StyledApp>
       <GlobalStyle />
       {hatches.map((hatch) => (
-        <Hatch
-          key={hatch.nr}
-          hatchData={hatch}
-          handleClick={handleClickHatch}
-        />
+        <Hatch key={hatch.nr} hatchData={hatch} handleClick={() => null} />
       ))}
     </StyledApp>
   );
