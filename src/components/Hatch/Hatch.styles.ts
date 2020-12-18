@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import hatchBackdrop from '../../img/hatch_backdrop.jpg';
+import styled from "styled-components";
+import hatchBackdrop from "../../img/hatch_backdrop.jpg";
 
 type Props = {
   open: boolean;
@@ -12,26 +12,26 @@ export const StyledHatch = styled.div<Props>`
   cursor: pointer;
 
   .front {
-    background: center / cover url(${props => props.background});
+    background: center / cover url(${(props) => props.background});
     position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
-    transform: ${props => (props.open ? 'rotateY(180deg)' : 'rotateY(0deg)')};
+    transform: ${(props) => (props.open ? "rotateY(180deg)" : "rotateY(0deg)")};
 
     p {
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Dancing Script', cursive;
+      font-family: "Dancing Script", cursive;
       color: #fff;
       padding: 20px;
-      width: 50%;
-      height: 50%;
+      width: 20%;
+      height: 20%;
       border-radius: 50%;
       background: rgba(0, 0, 0, 0.7);
       font-weight: 700;
-      font-size: 4rem;
+      font-size: 2rem;
     }
   }
 
@@ -40,11 +40,11 @@ export const StyledHatch = styled.div<Props>`
     background: center / cover url(${hatchBackdrop});
     top: 0px;
     left: 0px;
-    z-index: ${props => (props.open ? 2 : 1)};
-    transform: ${props => (props.open ? 'rotateY(0deg)' : 'rotateY(180deg)')};
+    z-index: ${(props) => (props.open ? 2 : 1)};
+    transform: ${(props) => (props.open ? "rotateY(0deg)" : "rotateY(180deg)")};
 
     p {
-      font-family: 'Dancing Script', cursive;
+      font-family: "Dancing Script", cursive;
       color: #fff;
       padding: 10px;
       font-size: 1.4rem;
