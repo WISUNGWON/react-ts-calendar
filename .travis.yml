@@ -8,10 +8,10 @@ services:
   - docker
 
 install:
-  - npm install
+  - yarn install
 
 script:
-  - npm run build
+  - yarn build
 
 after_success:
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
